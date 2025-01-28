@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "open-browser": "start http://localhost:3000"
+    "open-browser": "start http://localhost:3000",
+    "make-css-modules": "node scripts/makeCssModules.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",
