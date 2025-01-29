@@ -3,7 +3,7 @@ import { CSSProperties } from "react";
 import styles from "./LocationSearchBar.module.css";
 import SearchBar from "../util/search/SearchBar";
 import SvgIcon from "../util/svg/SvgIcon";
-import { RIGHT_TURN_SV_PATH } from "@/resource/svg";
+import { RIGHT_TURN_SVG_PATH } from "@/resource/svg";
 
 // Parameters Interface
 interface LocationSearchBarParameters {
@@ -29,7 +29,7 @@ export default function LocationSearchBar({
     >
       <SearchBar />
       <div className={styles["icon-container"]}>
-        <SvgIcon size={24}>{RIGHT_TURN_SV_PATH}</SvgIcon>
+        <SvgIcon size={24}>{RIGHT_TURN_SVG_PATH}</SvgIcon>
       </div>
     </div>
   );
