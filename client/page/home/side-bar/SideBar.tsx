@@ -1,6 +1,12 @@
 // Imports
 import { CSSProperties } from "react";
 import styles from "./SideBar.module.css";
+import LabeledIconButton from "@/component/app/LabeledIconButton";
+import {
+  BOOKMARK_SVG_PATH,
+  LIST_SVG_PATH,
+  RECENTS_SVG_PATH,
+} from "@/resource/svg";
 
 // Parameters Interface
 interface SideBarParameters {
@@ -15,16 +21,18 @@ export default function SideBar({
 }: SideBarParameters) {
   // XML Parameters
   const containerStyle: CSSProperties = {
-    ...style
-  }
+    ...style,
+  };
 
   // Return Component
   return (
     <div
-      className={`${styles["container"]} ${{className}}}`}
+      className={`${styles["container"]} ${{ className }}} h-full background border`}
       style={containerStyle}
     >
-      SideBar
+      <LabeledIconButton title="">{LIST_SVG_PATH}</LabeledIconButton>
+      <LabeledIconButton title="Saved">{BOOKMARK_SVG_PATH}</LabeledIconButton>
+      <LabeledIconButton title="Recents">{RECENTS_SVG_PATH}</LabeledIconButton>
     </div>
   );
 }

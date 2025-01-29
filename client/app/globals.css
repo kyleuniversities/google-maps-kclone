@@ -76,3 +76,23 @@ nextjs-portal {
 .background {
   background-color: white;
 }
+
+/** Padding **/
+.pd-5-10 {
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.pd-10-15 {
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+/** Border Radius **/
+.rounded {
+  border-radius: 15px;
+}
