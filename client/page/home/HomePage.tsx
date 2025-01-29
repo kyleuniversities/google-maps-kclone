@@ -4,6 +4,7 @@ import styles from "./HomePage.module.css";
 import MapBackground from "./map-background/MapBackground";
 import SideBar from "./side-bar/SideBar";
 import SidePadder from "@/component/util/spacer/SidePadder";
+import SearchMenu from "./search-menu/SearchMenu";
 
 // Parameters Interface
 interface HomePageParameters {
@@ -37,7 +38,7 @@ export default function $moduleName({
           >
             <div className={`${styles["action-menu"]} flex border background`}>
               <div className={`${styles["search-bar"]} flex border background`}>
-                Search Bar
+                <SearchMenu />
               </div>
               <SidePadder size={40} />
               <div

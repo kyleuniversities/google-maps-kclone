@@ -1,6 +1,7 @@
 // Imports
 import { CSSProperties } from "react";
 import styles from "./SearchMenu.module.css";
+import SearchBar from "@/component/util/search/SearchBar";
 
 // Parameters Interface
 interface SearchMenuParameters {
@@ -15,15 +16,16 @@ export default function SearchMenu({
 }: SearchMenuParameters) {
   // XML Parameters
   const containerStyle: CSSProperties = {
-    ...style
-  }
+    ...style,
+  };
 
   // Return Component
   return (
     <div
-      className={`${styles["container"]} ${{className}}}`}
+      className={`${styles["container"]} ${{ className }}}`}
       style={containerStyle}
     >
+      <SearchBar />
       SearchMenu
     </div>
   );
