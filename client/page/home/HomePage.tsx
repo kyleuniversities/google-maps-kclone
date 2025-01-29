@@ -2,6 +2,7 @@
 import { CSSProperties } from "react";
 import styles from "./HomePage.module.css";
 import MapBackground from "./map-background/MapBackground";
+import SideBar from "./side-bar/SideBar";
 
 // Parameters Interface
 interface HomePageParameters {
@@ -26,6 +27,45 @@ export default function $moduleName({
       style={containerStyle}
     >
       <MapBackground />
+      <div className={`${styles["sidebar-container"]} flex w-full h-full`}>
+        <SideBar />
+        <div className={`${styles["main-container"]} flex-col w-full h-full`}>
+          <div
+            className={`${styles["upper-container"]} flex w-full`}
+            style={{ border: "1px solid red" }}
+          >
+            <div className={`${styles["action-menu"]} flex border background`}>
+              <div className={`${styles["search-bar"]} flex border background`}>
+                Search Bar
+              </div>
+              <div
+                className={`${styles["top-nav-menu"]} flex border background`}
+              >
+                Top Nav Menu
+              </div>
+            </div>
+            <div
+              className={`${styles["action-menu"]} float-right border background`}
+            >
+              Profile Menu
+            </div>
+          </div>
+          {/** TODO: Fix Later **/}
+          <div style={{ height: "680px" }}>X</div>
+          <div
+            className={`${styles["lower-container"]} flex w-full float-bottom`}
+          >
+            <div className={`${styles["layers-box"]} border background`}>
+              Layers Box
+            </div>
+            <div
+              className={`${styles["explore-panel-group"]} float-right border background`}
+            >
+              Explore Panel Group
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
