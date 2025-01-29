@@ -31,6 +31,12 @@ nextjs-portal {
   display: flex;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /** Flex **/
 .flex-row {
   display: flex;
