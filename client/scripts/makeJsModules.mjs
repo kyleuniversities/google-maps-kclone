@@ -38,7 +38,7 @@ const getJsModuleText = (mainModuleName, moduleName) => {
     "}",
     "",
     "// Export Component",
-    `export default function $moduleName({`,
+    `export default function ${moduleName}({`,
     '  className = "",',
     "  style = {},",
     `}: ${moduleName}Parameters) {`,
@@ -137,6 +137,9 @@ const makeJsModules = (args) => {
   // Collect Enclosing Folder Path
   const folderPath = `./${args[2]}`;
 
+  // Set Suffix
+  let suffix = "";
+
   // Determine if the js module will have children
   let withChildren = false;
 
@@ -157,19 +160,36 @@ const makeJsModules = (args) => {
       continue;
     }
 
+    // Collect a Page suffix for the next children
+    if (moduleText === "--p") {
+      suffix = "Page";
+      continue;
+    }
+
+    // Collect a Suffix for the next children
+    if (moduleText === "--s") {
+      i++;
+      const newSuffix = args[i];
+      suffix = newSuffix;
+      continue;
+    }
+
+    // Delete a suffix for the next children if specified
+    if (moduleText === "--ns") {
+      suffix = "";
+      continue;
+    }
+
     // If it is in Upper-Camel-Case, make the module directly
     if (isFirstCapitalized(moduleText)) {
-      makeJsMainModule(folderPath, withChildren, moduleText);
+      makeJsMainModule(folderPath, withChildren, moduleText + suffix);
       continue;
     }
 
     // If it is Kebab-Case, make the folder first
     const moduleFolderPath = `${folderPath}/${moduleText}`;
     const kebabParts = splitKebabCase(moduleText);
-    const rawModuleName = joinUpperCamelCase(kebabParts);
-    const moduleName =
-      rawModuleName + (folderPath.includes("./page") ? "Page" : "");
-
+    const moduleName = joinUpperCamelCase(kebabParts) + suffix;
     makeJsMainModule(moduleFolderPath, withChildren, moduleName);
   }
 };

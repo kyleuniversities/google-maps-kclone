@@ -1,31 +1,30 @@
 // Imports
 import { CSSProperties } from "react";
-import styles from "./HomePage.module.css";
-import MapBackground from "./map-background/MapBackground";
+import styles from "./ExplorePanelGroup.module.css";
 
 // Parameters Interface
-interface HomePageParameters {
+interface ExplorePanelGroupParameters {
   className?: string;
   style?: CSSProperties;
 }
 
 // Export Component
-export default function $moduleName({
+export default function ExplorePanelGroup({
   className = "",
   style = {},
-}: HomePageParameters) {
+}: ExplorePanelGroupParameters) {
   // XML Parameters
   const containerStyle: CSSProperties = {
-    ...style,
-  };
+    ...style
+  }
 
   // Return Component
   return (
     <div
-      className={`${styles["container"]} ${{ className }}}`}
+      className={`${styles["container"]} ${{className}}}`}
       style={containerStyle}
     >
-      <MapBackground />
+      ExplorePanelGroup
     </div>
   );
 }

@@ -1,31 +1,30 @@
 // Imports
 import { CSSProperties } from "react";
-import styles from "./HomePage.module.css";
-import MapBackground from "./map-background/MapBackground";
+import styles from "./LiveTrafficPanel.module.css";
 
 // Parameters Interface
-interface HomePageParameters {
+interface LiveTrafficPanelParameters {
   className?: string;
   style?: CSSProperties;
 }
 
 // Export Component
-export default function $moduleName({
+export default function LiveTrafficPanel({
   className = "",
   style = {},
-}: HomePageParameters) {
+}: LiveTrafficPanelParameters) {
   // XML Parameters
   const containerStyle: CSSProperties = {
-    ...style,
-  };
+    ...style
+  }
 
   // Return Component
   return (
     <div
-      className={`${styles["container"]} ${{ className }}}`}
+      className={`${styles["container"]} ${{className}}}`}
       style={containerStyle}
     >
-      <MapBackground />
+      LiveTrafficPanel
     </div>
   );
 }

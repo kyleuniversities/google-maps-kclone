@@ -1,0 +1,46 @@
+.container {
+	display: block;
+	position: absolute;
+	z-index: -3;
+	min-width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.image {
+	display: block;
+	position: absolute;
+	z-index: -2;
+	min-width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+	object-fit: cover;
+	background-image: url('/site/mock-background.png');
+	background-size: cover;
+	transition: 0.3s;
+}
+
+.image-cover {
+	background-color: rgb(72, 200, 255);
+	position: absolute;
+	z-index: -1;
+	min-width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+	opacity: 0%;
+}
+
+.image-cover.active {
+	background-color: rgb(72, 200, 255);
+	position: absolute;
+	z-index: -1;
+	min-width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+	opacity: 100%;
+}
+
+.bg-image {
+	min-width: 100vw;
+	min-height: 100vh;
+}

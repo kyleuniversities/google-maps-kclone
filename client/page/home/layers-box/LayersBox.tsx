@@ -1,31 +1,30 @@
 // Imports
 import { CSSProperties } from "react";
-import styles from "./HomePage.module.css";
-import MapBackground from "./map-background/MapBackground";
+import styles from "./LayersBox.module.css";
 
 // Parameters Interface
-interface HomePageParameters {
+interface LayersBoxParameters {
   className?: string;
   style?: CSSProperties;
 }
 
 // Export Component
-export default function $moduleName({
+export default function LayersBox({
   className = "",
   style = {},
-}: HomePageParameters) {
+}: LayersBoxParameters) {
   // XML Parameters
   const containerStyle: CSSProperties = {
-    ...style,
-  };
+    ...style
+  }
 
   // Return Component
   return (
     <div
-      className={`${styles["container"]} ${{ className }}}`}
+      className={`${styles["container"]} ${{className}}}`}
       style={containerStyle}
     >
-      <MapBackground />
+      LayersBox
     </div>
   );
 }
