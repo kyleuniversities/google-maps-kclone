@@ -35,15 +35,15 @@ const createCssModule = (path) => {
   // create it if it does not already exist
   if (path.endsWith(".tsx")) {
     const text = fs.readFileSync(path, "utf8");
-    const fileName = getExtensionlessFileName(path);
+    const moduleName = getExtensionlessFileName(path);
 
     // Checks if there is a self-referenced module
     // Creates on if not existent
     const selfModuleIsReferenced = text.includes(
-      `import styles from "./${fileName}.module.css"`,
+      `import styles from "./${moduleName}.module.css"`,
     );
     const parentFolderPath = getParentFolderPath(path);
-    const selfModulePath = `${parentFolderPath}/${fileName}.module.css`;
+    const selfModulePath = `${parentFolderPath}/${moduleName}.module.css`;
     const selfModuleExists = fs.existsSync(selfModulePath);
     if (selfModuleIsReferenced && !selfModuleExists) {
       console.log(selfModulePath);

@@ -9,19 +9,19 @@ interface HomePageParameters {
 }
 
 // Export Component
-export default function HomePage({
+export default function $moduleName({
   className = "",
   style = {},
 }: HomePageParameters) {
   // XML Parameters
   const containerStyle: CSSProperties = {
-    ...style,
-  };
+    ...style
+  }
 
   // Return Component
   return (
     <div
-      className={`${styles["container"]} ${{ className }}}`}
+      className={`${styles["container"]} ${{className}}}`}
       style={containerStyle}
     >
       HomePage
