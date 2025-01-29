@@ -15,16 +15,24 @@ export default function ProfileDropdown({
 }: ProfileDropdownParameters) {
   // XML Parameters
   const containerStyle: CSSProperties = {
-    ...style
-  }
+    ...style,
+  };
 
   // Return Component
   return (
     <div
-      className={`${styles["container"]} ${{className}}}`}
+      className={`${styles["container"]} ${{ className }}}`}
       style={containerStyle}
     >
-      ProfileDropdown
+      <img
+        src="/site/profile-pic-example.png"
+        style={{
+          margin: "10px",
+          width: "45px",
+          borderRadius: "1000px",
+          border: "1px solid rgb(150,150,150)",
+        }}
+      />
     </div>
   );
 }

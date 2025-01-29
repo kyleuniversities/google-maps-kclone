@@ -6,6 +6,7 @@ import SideBar from "./side-bar/SideBar";
 import SidePadder from "@/component/util/spacer/SidePadder";
 import SearchMenu from "./search-menu/SearchMenu";
 import TopNavMenu from "./top-nav-menu/TopNavMenu";
+import ProfileDropdown from "./profile-dropdown/ProfileDropdown";
 
 // Parameters Interface
 interface HomePageParameters {
@@ -41,8 +42,8 @@ export default function $moduleName({
               <SidePadder size={10} />
               <TopNavMenu />
             </div>
-            <div className={`${styles["action-menu"]} float-right border`}>
-              Profile Menu
+            <div className={`${styles["action-menu"]} float-right`}>
+              <ProfileDropdown />
             </div>
           </div>
           {/** TODO: Fix Later **/}
