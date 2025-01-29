@@ -144,7 +144,6 @@ const makeJsModules = (args) => {
   for (let i = 3; i < args.length; i++) {
     // Collect the module
     const moduleText = args[i];
-    console.log(`args`, JSON.stringify(args));
 
     // If the mark is --c, have children on the next ones
     if (moduleText === "--c") {
@@ -160,7 +159,6 @@ const makeJsModules = (args) => {
 
     // If it is in Upper-Camel-Case, make the module directly
     if (isFirstCapitalized(moduleText)) {
-      console.log(`folderPath`, folderPath);
       makeJsMainModule(folderPath, withChildren, moduleText);
       continue;
     }
@@ -171,7 +169,6 @@ const makeJsModules = (args) => {
     const rawModuleName = joinUpperCamelCase(kebabParts);
     const moduleName =
       rawModuleName + (folderPath.includes("./page") ? "Page" : "");
-    console.log(`moduleFolderPath`, moduleFolderPath);
 
     makeJsMainModule(moduleFolderPath, withChildren, moduleName);
   }
