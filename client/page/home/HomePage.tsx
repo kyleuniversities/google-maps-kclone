@@ -3,6 +3,7 @@ import { CSSProperties } from "react";
 import styles from "./HomePage.module.css";
 import MapBackground from "./map-background/MapBackground";
 import SideBar from "./side-bar/SideBar";
+import SidePadder from "@/component/util/spacer/SidePadder";
 
 // Parameters Interface
 interface HomePageParameters {
@@ -38,6 +39,7 @@ export default function $moduleName({
               <div className={`${styles["search-bar"]} flex border background`}>
                 Search Bar
               </div>
+              <SidePadder size={40} />
               <div
                 className={`${styles["top-nav-menu"]} flex border background`}
               >
