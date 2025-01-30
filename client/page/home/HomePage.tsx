@@ -47,8 +47,6 @@ export default function $moduleName({
                     <div style={{ opacity: 0 }}>
                       <SearchMenu />
                     </div>
-                    <SearchMenu />
-                    <SearchMenu />
                   </GridComponent>
                 </GridContainer>
               </div>
