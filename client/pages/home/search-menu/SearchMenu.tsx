@@ -1,8 +1,8 @@
 // Imports
 import { CSSProperties } from "react";
 import styles from "./SearchMenu.module.css";
-import SearchBar from "@/component/util/search/SearchBar";
-import LocationSearchBar from "@/component/app/LocationSearchBar";
+import SearchBar from "@/components/util/search/SearchBar";
+import LocationSearchBar from "@/components/app/LocationSearchBar";
 
 // Parameters Interface
 interface SearchMenuParameters {

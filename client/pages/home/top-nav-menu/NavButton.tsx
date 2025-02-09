@@ -1,7 +1,7 @@
 // Imports
 import { CSSProperties, ReactNode } from "react";
 import styles from "./NavButton.module.css";
-import LabeledIconButton from "@/component/app/LabeledIconButton";
+import LabeledIconButton from "@/components/app/LabeledIconButton";
 
 // Parameters Interface
 interface NavButtonParameters {

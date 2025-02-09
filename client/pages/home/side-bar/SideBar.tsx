@@ -1,7 +1,7 @@
 // Imports
 import { CSSProperties } from "react";
 import styles from "./SideBar.module.css";
-import LabeledIconButton from "@/component/app/LabeledIconButton";
+import LabeledIconButton from "@/components/app/LabeledIconButton";
 import {
   BOOKMARK_SVG_PATH,
   LIST_SVG_PATH,

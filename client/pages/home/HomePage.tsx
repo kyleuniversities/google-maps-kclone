@@ -3,12 +3,12 @@ import { CSSProperties } from "react";
 import styles from "./HomePage.module.css";
 import MapBackground from "./map-background/MapBackground";
 import SideBar from "./side-bar/SideBar";
-import SidePadder from "@/component/util/spacer/SidePadder";
+import SidePadder from "@/components/util/spacer/SidePadder";
 import SearchMenu from "./search-menu/SearchMenu";
 import TopNavMenu from "./top-nav-menu/TopNavMenu";
 import ProfileDropdown from "./profile-dropdown/ProfileDropdown";
-import GridContainer from "@/component/util/grid/GridContainer";
-import GridComponent from "@/component/util/grid/GridComponent";
+import GridContainer from "@/components/util/grid/GridContainer";
+import GridComponent from "@/components/util/grid/GridComponent";
 
 // Parameters Interface
 interface HomePageParameters {

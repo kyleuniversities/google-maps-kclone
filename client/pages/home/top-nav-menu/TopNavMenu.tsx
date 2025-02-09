@@ -2,7 +2,7 @@
 import { CSSProperties } from "react";
 import styles from "./TopNavMenu.module.css";
 import NavButton from "./NavButton";
-import LabeledIconButton from "@/component/app/LabeledIconButton";
+import LabeledIconButton from "@/components/app/LabeledIconButton";
 import {
   ATM_SVG_PATH,
   BUS_FRONT_SVG_PATH,
