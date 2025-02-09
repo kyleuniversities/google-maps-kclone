@@ -1,0 +1,14 @@
+.container {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.icon-container {
+    color: rgb(40, 120, 255);
+}
+
+.icon-container:hover {
+    color: rgb(20, 60, 235);
+}

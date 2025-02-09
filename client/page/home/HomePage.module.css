@@ -1,0 +1,10 @@
+.container {
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.action-menu {
+	padding-left: 5px;
+}

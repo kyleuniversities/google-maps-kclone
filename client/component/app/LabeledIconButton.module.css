@@ -1,0 +1,16 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    color: black;
+    height: 70px; /** Optimize **/
+    padding: 10px;
+    margin: 5px;
+    transition: 0.3s;
+    background-color: white;
+}
+
+.container:hover {
+    color: blue;
+    background-color: rgb(230,230,230);
+}

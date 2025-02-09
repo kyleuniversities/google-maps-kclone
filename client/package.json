@@ -1,0 +1,32 @@
+{
+  "name": "google-maps-kclone",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run open-browser && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "open-browser": "start http://localhost:3000",
+    "make-css-modules": "node scripts/makeCssModules.mjs",
+    "make-js-modules": "node scripts/makeJsModules.mjs"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.0.1",
+    "google-maps-kclone": "file:",
+    "next": "15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.6",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+  }
+}
